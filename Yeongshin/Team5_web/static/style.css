@@ -1,9 +1,21 @@
 /* static/style.css */
 body {
-    background-color: lightblue;
+    align-content: center ;
+    color: white;
+    background-image: url("./img/blind_bg_02.jpg");
+    background-size: cover;
+    text-align: center; /* 요소 내부의 텍스트를 가운데 정렬 */
+    margin: 0 auto; /* 요소를 가로 방향으로 가운데 정렬 */
+}
+
+form {
+    align-content: center ;
+    color: white;
+    text-align: center; /* 요소 내부의 텍스트를 가운데 정렬 */
+    margin: 0 auto; /* 요소를 가로 방향으로 가운데 정렬 */
 }
 
 h1 {
-    color: navy;
+    color: white;
     margin-left: 20px;
 }
