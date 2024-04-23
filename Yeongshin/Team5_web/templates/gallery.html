@@ -4,7 +4,7 @@
     <title>이미지 갤러리</title>
   </head>
   <body>
-    <h1>이미지 갤러리</h1>
+    <h1>이미지와 캡션</h1>
     <h2>Images</h2>
     <ul>
       {% for image in images %}
@@ -14,7 +14,7 @@
       </li>
       {% endfor %}
     </ul>
-    <h2>Braille Images</h2>
+    <h2>텍스트와 점자 이미지</h2>
     <ul>
       {% for braille in brailles %}
       <li>
@@ -23,6 +23,17 @@
       </li>
       {% endfor %}
     </ul>
+    <h2>음성과 텍스트</h2>
+    <ul>
+      {% for voice in voices %}
+      <li>
+        <audio controls>
+          <source src="data:{{ voice.mime_type }};base64,{{ voice.voice.hex() }}" type="{{ voice.mime_type }}">
+          Your browser does not support the audio element.
+        </audio>
+        <p>{{ voice.text }}</p>
+      </li>
+      {% endfor %}
     <a href="/">업로드 화면으로 돌아가기</a>
   </body>
 </html>
